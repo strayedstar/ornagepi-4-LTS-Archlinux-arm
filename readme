@@ -1,0 +1,22 @@
+part info:
+idbootloader :64
+u-boot:16384
+trust:24576
+rootfs:32768(creat by yourself)
+kernel version:6.6.41-LTS
+ttyS2 current bitrate:115200(uboot/system),1500000(idbootloader)
+
+
+HOW TO USE?
+1.download Archlinux arm rootfs
+2.erase a sd card
+3.dd idbootloader,u-boot,trust images to current block
+4.creat a rootfs which start block at 32768
+5.unzip Archlinux arm rootfs to rootfs,remove boot dir
+6.copy rootfs-patch/* to rootfs
+7(option).remove linux,linux-headers and initramfs tools by pacman
+
+!!!only support btrfs/ext4 root filesystem,make sure rootfs is first partation in sd card!
+If not,modity bootloader "rootpart" value.
+
+bug(known):YT8153C tx status led don't work
