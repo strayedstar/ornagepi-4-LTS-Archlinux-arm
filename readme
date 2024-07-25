@@ -17,6 +17,6 @@ HOW TO USE?
 7(option).remove linux,linux-headers and initramfs tools by pacman
 
 !!!only support btrfs/ext4 root filesystem,make sure rootfs is first partation in sd card!
-If not,modity bootloader "rootpart" value.
+If not,please modity /boo/bootloader/bootloader "rootpart" value,and rebuild bootloader.cmd by uboot tools.
 
 bug(known):YT8153C tx status led don't work
